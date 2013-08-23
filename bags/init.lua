@@ -115,8 +115,11 @@ minetest.register_craft({
 	output = "bags:small",
 	recipe = {
         {"", "default:stick", ""},
-        {"default:wood", "default:wood", "default:wood"},
-        {"default:wood", "default:wood", "default:wood"},
+        {"wool:white", "wool:white", "wool:white"},
+        {"wool:white", "wool:white", "wool:white"},
+	-- I don't know what it's like by you, but
+        -- most bags I've seen are made with cloth
+
     },
 })
 minetest.register_craft({
