@@ -27,8 +27,8 @@ local get_formspec = function(player,page)
 	for i=1,4 do
 		if page=="bag"..i then
 			local image = player:get_inventory():get_stack("bag"..i, 1):get_definition().inventory_image
-			return "size[8,8.5]"
-				.."list[current_player;main;0,4.5;8,4;]"
+			return "size[8,9.5]"
+				.."list[current_player;main;0,5.5;8,4;]"
 				.."button[0,0;2,0.5;main;Main]"
 				.."button[2,0;2,0.5;bags;Bags]"
 				.."image[7,0;1,1;"..image.."]"
@@ -110,6 +110,12 @@ minetest.register_tool("bags:large", {
 	groups = {bagslots=24},
 })
 
+minetest.register_tool("bags:trolley", {
+	description = "Trolley",
+	inventory_image = "bags_trolley.png",
+	groups = {bagslots=32},
+})
+
 -- register bag crafts
 minetest.register_craft({
 	output = "bags:small",
@@ -136,6 +142,15 @@ minetest.register_craft({
         {"", "default:stick", ""},
         {"bags:medium", "bags:medium", "bags:medium"},
         {"bags:medium", "bags:medium", "bags:medium"},
+    },
+})
+
+minetest.register_craft({
+	output = "bags:trolley",
+	recipe = {
+        {"", "default:stick", ""},
+        {"bags:large", "bags:large", "bags:large"},
+        {"bags:large", "bags:large", "bags:large"},
     },
 })
 
