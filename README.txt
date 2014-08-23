@@ -42,6 +42,10 @@ BBB     B = bags:small
 BBB     S = default:stick
 BBB     B = bags:medium
 
+32-slot bag:
+-S-  <- bag:trolley
+BBB     S = default:stick
+BBB     B = bags:large
 
 ----------------------------------
 Modders Guide
